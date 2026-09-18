@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────
+   THEME — change these to re-color the whole prototype.
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --brand-50: #eef6f1;
+  --brand-100: #d5eadd;
+  --brand-500: #1f7a4d;
+  --brand-600: #17653f;
+  --brand-700: #125132;
+  --brand-900: #0b2e1d;
+  --accent-400: #e9b949; /* gold accent */
+  --page: #f5f7f6;
+}
+
+@theme inline {
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-900: var(--brand-900);
+  --color-accent-400: var(--accent-400);
+  --color-page: var(--page);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Times New Roman", Times, serif;
+}
+
+body {
+  background: var(--page);
+  color: #1c2420;
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+  .print-area { box-shadow: none !important; border: none !important; margin: 0 !important; }
+  @page { size: A4; margin: 10mm; }
+}
